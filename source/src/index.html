@@ -1099,7 +1099,7 @@
 			</main>
 		</div>
 	</div>
-	<footer class="footer" id="order">
+	<footer class="footer" id="order" onclick="sendMessage('make_order')">
 		<div class="container">
 			<div class="order">
 				<div class="order__title">
@@ -1117,7 +1117,7 @@
 					</div>
 				</a>
 
-				<div class="mob-order__calc" id="mob-order_animate">
+				<div class="mob-order__calc" id="mob-order_animate" onclick="sendMessage('fill_brief')">
 					<div class="mob-order-round"></div>
 					<div class="mob-order-text">
 						<p>Заполнить бриф</p>
@@ -1146,7 +1146,8 @@
 	<script>
 		// Функция для отправки сообщения родительскому окну
 		function sendMessage(buttonName) {
-			window.parent.postMessage({ buttonName: buttonName }, 'http://dcreativestudio.ru');
+			window.parent.postMessage({ buttonName: buttonName }, 'https://dcreativestudio.ru/');
+			console.log(buttonName)
 		}
 	</script>
 </body>
